@@ -41,7 +41,7 @@ This project explores e-commerce transaction data to analyze customer purchasing
 
 **Dashboard:**
 
-<img width="960" height="536" alt="Executive Summary Dashboard" src="PLACEHOLDER_IMAGE_URL_HERE" />
+<img width="960" height="536" alt="Executive Summary Dashboard" src="images/dashboard1.jpg" />
 
 *(Note: Replace `PLACEHOLDER_IMAGE_URL_HERE` with the actual URL or relative path to your dashboard screenshot)*
 
@@ -63,7 +63,7 @@ This project explores e-commerce transaction data to analyze customer purchasing
 
 **Dashboard:**
 
-<img width="960" height="538" alt="Product Analysis Dashboard" src="PLACEHOLDER_IMAGE_URL_HERE" />
+<img width="960" height="538" alt="Product Analysis Dashboard" src="images/dashboard2.jpg" />
 
 ### 🔹 Customer Churn & Cohorts
 
@@ -79,7 +79,7 @@ This project explores e-commerce transaction data to analyze customer purchasing
 
 **Dashboard:**
 
-<img width="957" height="535" alt="Customer Churn Dashboard" src="PLACEHOLDER_IMAGE_URL_HERE" />
+<img width="957" height="535" alt="Customer Churn Dashboard" src="images/dashboard2.jpg" />
 
 ---
 
