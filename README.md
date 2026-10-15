@@ -1,90 +1,114 @@
-# 🛒 E-Commerce Logistics & Customer Churn Analytics
+# 📊 E-Commerce Sales Analysis
 
-This project explores e-commerce transaction data to analyze customer purchasing behavior, identify operational inefficiencies (such as customer returns/cancellations), and track customer retention. The dataset was processed using **Power Query (M Code)**, modeled with a **Star Schema**, and visualized using **Power BI** dashboards.
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?logo=python&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?logo=microsoft-excel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
----
-
-## 📊 Project Overview
-
-* **Domain:** E-Commerce / Retail
-* **Data Size:** ~540,000+ rows of raw transaction data
-* **Tools Used:**
-  * Power Query (Data Cleaning & Transformation)
-  * DAX (Time-intelligence & advanced measures)
-  * Power BI (Visualization & Modeling)
-* **Focus:** Gross vs. Net Revenue, Customer Churn, Return Rates, Product Performance, and Geographical Distribution
+> End-to-end sales analytics project on 540,000+ e-commerce transactions — analyzing revenue, customer churn, return rates, and regional performance with Python and Excel.
 
 ---
 
-## 📊 Key Performance Metrics
+## 📌 Project Overview
 
-* Gross vs. Net Revenue
-* Return Rate (%)
-* Customer Churn Rate (90-Day Inactivity)
-* Average Customer Lifetime Value (LTV)
-* Cancellation Financial Impact
-* Active vs. Inactive Customers
-* Revenue by Geography & Product Category
-
----
-
-## 📊 Overall Performance Summary
-
-| Metric              | Highest Segment | Lowest Segment |
-| ------------------- | --------------- | -------------- |
-| Net Revenue         | Premium Cohort  | Standard Cohort|
-| Return Rate         | Apparel (12.4%) | Electronics (2.1%) |
-| Churn Rate          | Q3 (18%)        | Q1 (5%)        |
-| Customer Retention  | Europe (85%)    | Americas (45%) |
-
-**Insight:** Premium customers account for 45% of net revenue with an average purchase frequency of 18 days. Returns are concentrated heavily in specific low-cost apparel items. Preserving null CustomerIDs as "Guest Checkout" preserved 25.2% of total transaction records.
-
-**Dashboard:**
-
-<img width="960" height="536" alt="Executive Summary Dashboard" src="images/dashboard1.jpg" />
-
-*(Note: Replace `PLACEHOLDER_IMAGE_URL_HERE` with the actual URL or relative path to your dashboard screenshot)*
+| Attribute | Details |
+|-----------|---------|
+| **Domain** | E-Commerce / Retail |
+| **Dataset** | Online Retail (540,000+ rows) |
+| **Tools** | Python, Pandas, Matplotlib, Seaborn, Excel |
+| **Focus** | Revenue trends, Customer churn, Return analysis, Regional performance |
 
 ---
 
-## 📅 Category Insights & Recommendations
+## 📈 Key Performance Metrics Analyzed
 
-### 🔹 Product Returns & Cancellations
-
-**Insights:**
-* Cancellations are heavily skewed towards 3 specific product categories.
-* High return rate (12.4%) in the Apparel segment compared to company average (2.1%).
-* "Guest Checkouts" have a 15% higher cancellation rate than registered customers.
-
-**Recommendations:**
-1. Investigate sizing/quality issues for top 5 returned apparel items.
-2. Implement stricter return policies for guest checkouts.
-3. Enhance product descriptions for high-return items to set better customer expectations.
-
-**Dashboard:**
-
-<img width="960" height="538" alt="Product Analysis Dashboard" src="images/dashboard2.jpg" />
-
-### 🔹 Customer Churn & Cohorts
-
-**Insights:**
-* Customers with >90 days of inactivity rarely return (Churned).
-* Peak churn occurs immediately after the Q4 holiday season.
-* Premium-segment accounts have the lowest churn and highest LTV.
-
-**Recommendations:**
-1. Launch targeted re-engagement email campaigns at the 60-day inactivity mark.
-2. Introduce a loyalty program to transition "Standard" cohort customers to "Premium".
-3. Offer exclusive Q1 promotions to retain holiday shoppers.
-
-**Dashboard:**
-
-<img width="957" height="535" alt="Customer Churn Dashboard" src="images/dashboard2.jpg" />
+| Metric | Value |
+|--------|-------|
+| Gross vs. Net Revenue | Analyzed across all segments |
+| Return Rate | 12.4% in Apparel vs. 2.1% company avg |
+| Customer Churn Rate | 18% peak in Q3 (90-day inactivity model) |
+| Avg Customer LTV | Calculated per cohort |
+| Europe Retention | 85% (highest region) |
+| Americas Retention | 45% (lowest region) |
 
 ---
 
-## 🚀 How to Run this Project
+## 🔍 Key Insights
 
-1. **Clone the Repository:** Copy this folder to your local machine.
-2. **Open the Dataset:** The clean CSVs are saved in the `clean_data` folder.
-3. **Launch Power BI:** Load the CSVs, configure the model relationships, and review the DAX measures.
+- **Premium customers** account for **45% of net revenue** with avg purchase frequency of 18 days
+- **Cancellations skewed** to just 3 product categories — targeted fix possible
+- Preserving null CustomerIDs as "Guest Checkout" saved **25.2% of transaction records**
+- Customers inactive for **>90 days** have a <5% chance of returning
+
+---
+
+## 📊 Analysis Modules
+
+### 1. 🧹 Data Cleaning (`clean_data/`)
+- Removed duplicates and invalid transactions
+- Handled missing CustomerIDs as "Guest Checkout"
+- Standardized date formats and currency fields
+
+### 2. 📉 Revenue Analysis (`analyze_data.py`)
+- Gross vs. Net Revenue by month, quarter, and year
+- Revenue segmented by product category and geography
+- YoY and MoM growth calculations
+
+### 3. 👥 Customer Churn Analysis
+- 90-day inactivity churn model
+- Cohort analysis (Premium vs. Standard customers)
+- Customer Lifetime Value (LTV) by segment
+
+### 4. 📦 Return Rate Analysis
+- Return rate by product category
+- Guest vs. registered customer return comparison
+- Financial impact of cancellations
+
+---
+
+## 📁 Project Structure
+
+```
+sales-analysis/
+├── analyze_data.py             # Main analysis script
+├── generate_data.py            # Data generation / augmentation
+├── process_data.py             # Data processing pipeline
+├── Online Retail.xlsx          # Source dataset (540K+ rows)
+├── clean_data/                 # Cleaned output files
+├── images/                     # Dashboard screenshots
+└── README.md
+```
+
+---
+
+## 🚀 How to Run
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/dog098263-ui/sales-analysis.git
+cd sales-analysis
+
+# 2. Install dependencies
+pip install pandas numpy matplotlib seaborn openpyxl
+
+# 3. Run analysis
+python analyze_data.py
+```
+
+---
+
+## 💡 Business Recommendations
+
+1. **Reduce Apparel Returns** — Investigate sizing/quality issues for top 5 returned items
+2. **Re-engagement campaigns** at 60-day inactivity mark (before churn point)
+3. **Loyalty program** to upgrade Standard → Premium cohort customers
+4. **Q1 promotions** to counteract post-holiday seasonal churn spike
+
+---
+
+## 👤 Author
+
+**Aman Shakil** — [GitHub](https://github.com/dog098263-ui) · [Email](mailto:dog098263@gmail.com)
+
+⭐ *Star this repo if you found it useful!*
